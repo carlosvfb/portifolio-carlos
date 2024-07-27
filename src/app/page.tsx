@@ -1,113 +1,134 @@
-import Image from "next/image";
+import { Layout } from '@/components/layout';
+import { Projects } from '@/components/projects';
+import { Skills } from '@/components/skills';
+import { About } from '@/components/about';
 
+const projects = [
+  {
+    title: 'Projeto Agência XYZ',
+    description: 'Descrição breve do projeto.',
+    image: '/projeto-agencia-xyz.jpg',
+    codeLink: 'https://github.com/seu-usuario/projeto1',
+    demoLink: 'https://demo.com/projeto1',
+  },
+  {
+    title: 'Projeto API GitHub',
+    description: 'Descrição breve do projeto.',
+    image: '/projeto-api-github.jpg',
+    codeLink: 'https://github.com/seu-usuario/projeto2',
+    demoLink: 'https://demo.com/projeto2',
+  },
+  {
+    title: 'Projeto GTA',
+    description: 'Descrição breve do projeto.',
+    image: '/projeto-gta.png',
+    codeLink: 'https://github.com/seu-usuario/projeto3',
+    demoLink: 'https://demo.com/projeto3',
+  },
+  {
+    title: 'Projeto Hamburgueria',
+    description: 'Descrição breve do projeto.',
+    image: '/projeto-hamburgueria.jpg',
+    codeLink: 'https://github.com/seu-usuario/projeto4',
+    demoLink: 'https://demo.com/projeto4',
+  },
+  {
+    title: 'Projeto Snake Game',
+    description: 'Descrição breve do projeto.',
+    image: '/projeto-jogo-cobrinha.png',
+    codeLink: 'https://github.com/seu-usuario/projeto4',
+    demoLink: 'https://demo.com/projeto4',
+  },
+  {
+    title: 'Projeto Listagem Pokemon',
+    description: 'Descrição breve do projeto.',
+    image: '/projeto-listagem-pokemon.png',
+    codeLink: 'https://github.com/seu-usuario/projeto4',
+    demoLink: 'https://demo.com/projeto4',
+  },
+  {
+    title: 'Projeto One Piece',
+    description: 'Descrição breve do projeto.',
+    image: '/projeto-one-piece.png',
+    codeLink: 'https://github.com/seu-usuario/projeto4',
+    demoLink: 'https://demo.com/projeto4',
+  },
+  {
+    title: 'Projeto X-men',
+    description: 'Descrição breve do projeto.',
+    image: '/projeto-x-men.png',
+    codeLink: 'https://github.com/seu-usuario/projeto4',
+    demoLink: 'https://demo.com/projeto4',
+  }
+];
+const skills = [
+  {
+    title: 'HTML',
+    description: 'HTML (HyperText Markup Language) é a linguagem de marcação usada para criar e estruturar páginas da web, definindo elementos como texto, imagens, links e tabelas por meio de tags.',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg',
+    documentationLink: 'https://developer.mozilla.org/pt-BR/docs/Web/HTML'
+  },
+  {
+    title: 'CSS',
+    description: ' CSS (Cascading Style Sheets) é a linguagem usada para estilizar essas páginas, controlando a aparência de elementos HTML, como cores, fontes, layout e espaçamento.',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg',
+    documentationLink: 'https://developer.mozilla.org/pt-BR/docs/Web/CSS'
+  },
+  {
+    title: 'JavaScript',
+    description: 'JavaScript é uma linguagem de programação usada no desenvolvimento web para adicionar interatividade e dinamismo às páginas, permitindo a criação de scripts que são executados no navegador, tornando as páginas mais interativas.',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+    documentationLink: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript'
+  },
+  {
+    title: 'TypeScript',
+    description: 'Descrição breve do projeto.',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
+    documentationLink: 'https://www.typescriptlang.org/docs/'
+  },
+  {
+    title: 'Tailwind',
+    description: 'Descrição breve do projeto.',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+    documentationLink: 'https://tailwindcss.com/'
+  },
+  {
+    title: 'Bootstrap',
+    description: 'Descrição breve do projeto.',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg',
+    documentationLink: 'https://getbootstrap.com/'
+  },
+  {
+    title: 'React',
+    description: 'Descrição breve do projeto.',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+    documentationLink: 'https://pt-br.legacy.reactjs.org/'
+  },
+  {
+    title: 'Git',
+    description: 'Descrição breve do projeto.',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg',
+    documentationLink: 'https://git-scm.com/'
+  },
+  {
+    title: 'GitHub',
+    description: 'Descrição breve do projeto.',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg',
+    documentationLink: 'https://docs.github.com/pt'
+  },
+  {
+    title: 'Next.js',
+    description: 'Descrição breve do projeto.',
+    image: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg',
+    documentationLink: 'https://nextjs.org/'
+  },
+];
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <Layout>
+      <About />
+      <Skills skills={skills} />
+      <Projects projects={projects} />
+    </Layout>
   );
 }
