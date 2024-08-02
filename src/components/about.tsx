@@ -2,8 +2,8 @@ import Image from "next/image";
 import { FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 export function About() {
     return (
-      <section id="about" className="py-20">
-            <h2 className="text-4xl font-bold text-center mb-8">Sobre Mim</h2>
+      <section className="py-20">
+            <h2 className="text-4xl font-bold text-center mb-8 ">Sobre Mim</h2>
         <div className="flex items-center justify-center gap-40">
           <div className="flex flex-col space-x-4 mt-4">
             <p className="text-center max-w-xl text-gray-800 dark:text-gray-200">Breve biografia sobre você, suas paixões e o que você faz.</p>

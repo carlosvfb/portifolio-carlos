@@ -84,10 +84,11 @@ const config = {
       backgroundSize: {
         'size-180': '180% 180%',
       },
-      backgroundImage: {
+      backgroundImage: () => ({
         'custom-gradient-light': 'linear-gradient(150deg, #FFF, #0077cc)', 
-        'custom-gradient-dark': 'linear-gradient(150deg, #000000, #081c8d)',
-      },
+        'custom-gradient-dark': 'linear-gradient(150deg, #000000, #2563eb)',
+        'instagram-gradient': 'linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4)'
+      }),
       boxShadow: {
         'shadow-light': '0 0 30px #000000',
         'dark-shadow': '0 0 30px #FFF',

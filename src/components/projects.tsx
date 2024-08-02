@@ -30,7 +30,7 @@ interface Project {
          Autoplay({ delay: 4000 })
         );
     return (
-        <section id="projects" className="p-20">
+        <section className="p-20">
           <h2 className="text-4xl font-bold text-center mb-8">Projetos</h2>
           <div className="w-full flex justify-center">
             <Carousel

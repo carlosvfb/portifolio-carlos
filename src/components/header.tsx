@@ -1,29 +1,33 @@
 'use client';
 
-interface HeaderProps {
-    theme: 'light' | 'dark';
-    toggleTheme: () => void;
-  }
+import Link from "next/link";
+import { ModeToggle } from "./toggle-theme";
 
-export function Header({ theme, toggleTheme }: HeaderProps) {
+export function Header() {
     return (
       <header className="bg-transparent border-b-[1px] border-black  text-black dark:text-white dark:border-white p-4">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="flex flex-col">
+          <Link href="/" className="flex flex-col">
             <h1 className="text-2xl font-bold">Carlos Vítor</h1>
             <p className="text-sm font-semibold">Portifólio profissional</p>
-          </div>
+          </Link>
           <nav>
             <ul className="flex space-x-4">
-              <li><a href="#about" className="hover:underline font-semibold">Sobre</a></li>
-              <li><a href="#skills" className="hover:underline font-semibold">Habilidades</a></li>
-              <li><a href="#projects" className="hover:underline font-semibold">Projetos</a></li>
-              <li><a href="#contact" className="hover:underline font-semibold">Contato</a></li>
+              <li>
+                <Link href="/about" className="hover:underline font-semibold">Sobre</Link>
+              </li>
+              <li>
+                <Link href="/skills" className="hover:underline font-semibold">Habilidades</Link>
+              </li>
+              <li>
+                <Link href="/projects" className="hover:underline font-semibold">Projetos</Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:underline font-semibold">Contato</Link>
+              </li>
             </ul>
           </nav>
-          <button onClick={toggleTheme} className="ml-4 p-2 bg-gray-600 rounded-full">
-            {theme === 'light' ? '🌙' : '☀️'}
-          </button>
+          <ModeToggle />
         </div>
       </header>
     );
