@@ -12,6 +12,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import Image from "next/image";
+import { IoCodeSlash, IoLogoVercel } from "react-icons/io5";
+import { FaGithub } from "react-icons/fa";
 
 interface Project {
     title: string;
@@ -46,9 +48,12 @@ interface Project {
                         <Card className="max-w-96">
                             <CardContent className="relative p-6 bg-white dark:bg-gray-700 rounded-lg flex flex-col gap-5">
                                 <h3 className="text-2xl font-bold text-center">{project.title}</h3>
-                                <Image className="rounded-lg h-[550px] cursor-pointer hover:scale-2" src={project.image} alt={project.title} width={900} height={300} onClick={() => window.open(project.demoLink, '_blank')}/>
+                                <Image className="rounded-lg h-[550px]" src={project.image} alt={project.title} width={900} height={300}/>
                                 <p className="text-gray-600 dark:text-gray-300">{project.description}</p>
-                                <button className="bg-gray-600 hover:bg-gray-400 text-white font-bold py-2 px-4 rounded">Ver código</button>
+                                <div className="flex justify-between">
+                                  <button className="bg-gray-400 text-black  dark:text-white text-xl p-1 font-bold py-2 px-4 rounded dark:bg-black flex items-center gap-2 hover:scale-2"  onClick={() => window.open(project.demoLink, '_blank')}>Projeto <IoLogoVercel /></button>
+                                  <button className="bg-gray-400 dark:text-white text-black text-xl font-bold py-2 px-4 rounded dark:bg-black flex items-center gap-2 hover:scale-2" onClick={() => window.open(project.codeLink, '_blank')}>Repositório <FaGithub /></button>
+                                </div>
                             </CardContent>
                         </Card>
                     </div>
