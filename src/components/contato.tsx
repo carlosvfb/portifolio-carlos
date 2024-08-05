@@ -18,7 +18,6 @@ export function Contact() {
       setTimeout(() => {
         setShowSuccessAlert(false);
       }, 3000);
-      document.getElementById("contactForm")?.reset();
     }
 
     if (state.errors && state.errors.length > 0) {
@@ -33,7 +32,7 @@ export function Contact() {
     <section className="p-20">
       <h1 className="text-4xl font-bold text-center mb-8">Entre em Contato</h1>
       <div className='flex justify-center items-center'>
-        <form id="contactForm" onSubmit={handleSubmit} className="space-y-4 w-1/2">
+        <form onSubmit={handleSubmit} className="space-y-4 w-1/2">
           <div>
             <label htmlFor="name" className="block text-sm font-medium">Nome</label>
             <Input
