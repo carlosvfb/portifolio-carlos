@@ -19,14 +19,7 @@ export function Contact() {
         setShowSuccessAlert(false);
       }, 3000);
     }
-
-    if (state.errors && state.errors.length > 0) {
-      setShowErrorAlert(true);
-      setTimeout(() => {
-        setShowErrorAlert(false);
-      }, 3000);
-    }
-  }, [state.succeeded, state.errors]);
+  }, [state.succeeded]);
 
   return (
     <section className="p-20">
