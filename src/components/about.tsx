@@ -17,12 +17,10 @@ export function About() {
             />
           </div>
           <p className="max-w-2xl ml-16 text-gray-800 dark:text-gray-200">
-            Sou um desenvolvedor web front-end com uma paixão inata por
-            tecnologia e inovação. Adoro explorar novas ferramentas e técnicas
-            para criar experiências digitais que sejam tanto bonitas quanto
-            funcionais. Sou uma pessoa curiosa e dedicada, sempre buscando
-            aprender e me aperfeiçoar, tanto profissionalmente quanto
-            pessoalmente.
+          Um desenvolvedor web front-end com uma paixão imensa pela programação, algo que descobri no início da minha jornada e que logo percebi ser a carreira dos meus sonhos. Adoro tecnologia e nada me satisfaz mais do que criar experiências digitais que sejam tanto bonitas quanto funcionais.  
+          </p>
+          <p className="max-w-2xl ml-16 text-gray-800 dark:text-gray-200">
+          Gosto muito de trabalhar em equipe e acredito que a colaboração é a chave para alcançar grandes objetivos e criar soluções inovadoras. Tenho facilidade em aprender coisas novas e estou sempre disposto a enfrentar novos desafios. Sou ativo e proativo, sempre buscando fazer o meu melhor em qualquer tarefa.
           </p>
           <ul className="flex justify-center space-x-4">
             <li className="border border-2 border-[#000000] rounded-full hover:bg-[#000000] hover:shadow-shadow-light dark:border-[#FFF] hover:dark:bg-[#FFF] dark:hover:shadow-dark-shadow">
