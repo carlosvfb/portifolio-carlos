@@ -26,6 +26,7 @@ export function Contact() {
       setShowSuccessAlert(true);
       setTimeout(() => {
         setShowSuccessAlert(false);
+        window.location.reload()
       }, 3000);
     }
   }, [state.succeeded]);

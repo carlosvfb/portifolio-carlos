@@ -86,7 +86,7 @@ const config = {
       },
       backgroundImage: () => ({
         'custom-gradient-light': 'linear-gradient(150deg, #FFF, #0077cc)', 
-        'custom-gradient-dark': 'linear-gradient(150deg, #000000, #2563eb)',
+        'custom-gradient-dark': 'linear-gradient(150deg, #000000, #1b3a6b)',
         'instagram-gradient': 'linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4)'
       }),
       boxShadow: {

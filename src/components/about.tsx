@@ -22,28 +22,6 @@ export function About() {
           <p className="max-w-2xl ml-16 text-gray-800 dark:text-gray-200">
           Gosto muito de trabalhar em equipe e acredito que a colaboração é a chave para alcançar grandes objetivos e criar soluções inovadoras. Tenho facilidade em aprender coisas novas e estou sempre disposto a enfrentar novos desafios. Sou ativo e proativo, sempre buscando fazer o meu melhor em qualquer tarefa.
           </p>
-          <ul className="flex justify-center space-x-4">
-            <li className="border border-2 border-[#000000] rounded-full hover:bg-[#000000] hover:shadow-shadow-light dark:border-[#FFF] hover:dark:bg-[#FFF] dark:hover:shadow-dark-shadow">
-              <a href="">
-                <FaGithub className="text-5xl p-2 hover:text-white text-[#000000] hover:dark:text-black dark:text-[#FFF]" />
-              </a>
-            </li>
-            <li className="border border-2 border-[#000000] rounded-full hover:bg-[#000000] hover:shadow-shadow-light dark:border-[#FFF] hover:dark:bg-[#FFF] dark:hover:shadow-dark-shadow">
-              <a href="">
-                <FaInstagram className="text-5xl p-2 hover:text-white text-[#000000] hover:dark:text-black dark:text-[#FFF]" />
-              </a>
-            </li>
-            <li className="border border-2 border-[#000000] rounded-full hover:bg-[#000000] hover:shadow-shadow-light dark:border-[#FFF] hover:dark:bg-[#FFF] dark:hover:shadow-dark-shadow">
-              <a href="">
-                <FaLinkedin className="text-5xl p-2 hover:text-white text-[#000000] hover:dark:text-black dark:text-[#FFF]" />
-              </a>
-            </li>
-            <li className="border border-2 border-[#000000] rounded-full hover:bg-[#000000] hover:shadow-shadow-light dark:border-[#FFF] hover:dark:bg-[#FFF] dark:hover:shadow-dark-shadow">
-              <a href="">
-                <FaWhatsapp className="text-5xl p-2 hover:text-white text-[#000000] hover:dark:text-black dark:text-[#FFF]" />
-              </a>
-            </li>
-          </ul>
         </div>
         <div className="gradient-background dark:bg-gradient-to-r dark:from-[#081c8d] dark:to-[#000000] rounded-full">
           <Image

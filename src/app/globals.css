@@ -101,7 +101,7 @@ body.dark {
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background-color: #005f99;
+  background-color: #1b3a6b;
   border-radius: 10px; 
   border: 3px solid #1F252E; 
 }
@@ -127,11 +127,4 @@ body.dark {
 .dark .gradient-background-dark {
   background-size: 180% 180%;
   animation: gradient-animation 5s ease infinite;
-}
-
-.instagram-icon {
-  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
 }
