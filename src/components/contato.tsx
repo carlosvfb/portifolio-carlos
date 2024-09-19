@@ -40,13 +40,11 @@ export function Contact() {
 
   const handleSubmitForm = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    // Validação
     const isFormValid = Object.values(inputValues).every(value => value.trim() !== '');
 
     if (isFormValid) {
       setIsValid(true);
-      handleSubmit(e);  // Continue com o envio do formulário
+      handleSubmit(e);
     } else {
       setIsValid(false);
       setShowErrorAlert(true);
@@ -57,10 +55,10 @@ export function Contact() {
   };
 
   return (
-    <section className="p-20">
+    <section className="p-14">
       <h1 className="text-4xl font-bold text-center mb-8">Entre em Contato</h1>
       <div className='flex justify-center items-center'>
-        <form onSubmit={handleSubmitForm} className="space-y-4 w-1/2">
+        <form onSubmit={handleSubmitForm} className="space-y-4 w-full xl:w-1/2">
           <div>
             <label htmlFor="name" className="block text-sm font-medium">Nome</label>
             <Input
@@ -109,7 +107,7 @@ export function Contact() {
           <Button
             type="submit"
             disabled={state.submitting}
-            className="bg-blue-500 text-white flex items-center"
+            className="bg-blue-500 text-white flex items-center hover:bg-blue-800"
           >
             Enviar
           </Button>
