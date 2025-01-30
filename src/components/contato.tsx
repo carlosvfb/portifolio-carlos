@@ -7,6 +7,8 @@ import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Button } from './ui/button';
 import { MdErrorOutline } from 'react-icons/md';
+import { motion } from "framer-motion";
+import { Send, SendHorizonal } from 'lucide-react';
 
 interface InputValues {
   name: string;
@@ -56,28 +58,35 @@ export function Contact() {
 
   return (
     <section className="p-14">
-      <h1 className="text-4xl font-bold text-center mb-8">Entre em Contato</h1>
+      <motion.div className="text-center mb-12" initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+          <h2 className="text-3xl font-bold">Entre em contato</h2>
+          <p className="text-gray-600 dark:text-gray-300">
+          Entre em contato comigo para colaborações, dúvidas ou oportunidades.
+          </p>
+        </motion.div>
       <div className='flex justify-center items-center'>
-        <form onSubmit={handleSubmitForm} className="space-y-4 w-full xl:w-1/2">
+        <motion.form onSubmit={handleSubmitForm} className="space-y-4 w-full xl:w-1/2  rounded-lg p-8" initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}>
           <div>
-            <label htmlFor="name" className="block text-sm font-medium">Nome</label>
+            <label htmlFor="name" className="block text-sm font-medium">Nome:</label>
             <Input
               type="text"
               id="name"
               name="name"
-              placeholder="Seu nome"
+              placeholder="Seu nome..."
               className="mt-1 w-full"
               value={inputValues.name}
               onChange={handleChange}
             />
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium">E-mail</label>
+            <label htmlFor="email" className="block text-sm font-medium">E-mail:</label>
             <Input
               type="email"
               id="email"
               name="email"
-              placeholder="Seu e-mail"
+              placeholder="Seu e-mail..."
               className="mt-1 w-full"
               value={inputValues.email}
               onChange={handleChange}
@@ -89,11 +98,11 @@ export function Contact() {
             />
           </div>
           <div>
-            <label htmlFor="message" className="block text-sm font-medium">Mensagem</label>
+            <label htmlFor="message" className="block text-sm font-medium">Mensagem:</label>
             <Textarea
               id="message"
               name="message"
-              placeholder="Sua mensagem"
+              placeholder="Sua mensagem..."
               className="mt-1 w-full"
               value={inputValues.message}
               onChange={handleChange}
@@ -107,9 +116,9 @@ export function Contact() {
           <Button
             type="submit"
             disabled={state.submitting}
-            className="bg-blue-500 text-white flex items-center hover:bg-blue-800"
+            className="border-[2.7px] border-[#000000] hover:bg-[#000000] hover:shadow-shadow-light dark:border-[#FFF] hover:dark:bg-[#FFF] dark:hover:shadow-dark-shadow inline-flex items-center px-4 py-3 hover:text-white text-[#000000] hover:dark:text-black dark:text-[#FFF] font-semibold rounded-lg shadow-md transition duration-300 bg-transparent gap-2"
           >
-            Enviar
+            Enviar <SendHorizonal size={16}/>
           </Button>
           {state.submitting && <p className="text-blue-500">Enviando...</p>}
           {!isValid && <p className="text-red-500">Todos os campos devem ser preenchidos.</p>}
@@ -134,7 +143,7 @@ export function Contact() {
               </Alert>
             </div>
           )}
-        </form>
+        </motion.form>
       </div>
     </section>
   );

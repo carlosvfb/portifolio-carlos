@@ -11,6 +11,9 @@ export function Navbar() {
                 <Link href="/skills" className="hover:underline font-semibold text-center">Habilidades</Link>
               </li>
               <li>
+                <Link href="/certifications" className="hover:underline font-semibold text-center">Certificados</Link>
+              </li>
+              <li>
                 <Link href="/projects" className="hover:underline font-semibold">Projetos</Link>
               </li>
               <li>

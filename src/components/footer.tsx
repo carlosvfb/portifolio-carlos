@@ -10,22 +10,22 @@ export function Footer() {
           <p>&copy; {new Date().getFullYear()} Carlos Vítor. Todos os direitos reservados.</p>
           <ul className="flex justify-center space-x-3">
             <li className="border-2 border-[#000000] rounded-full hover:bg-[#000000] hover:shadow-shadow-light dark:border-[#FFF] hover:dark:bg-[#FFF] dark:hover:shadow-dark-shadow">
-              <a href="https://github.com/carlosvfb">
+              <a href="https://github.com/carlosvfb" target="_blank">
                 <FaGithub className="text-4xl p-2 hover:text-white text-[#000000] hover:dark:text-black dark:text-[#FFF]" />
               </a>
             </li>
             <li className="border-2 border-[#000000] rounded-full hover:bg-[#000000] hover:shadow-shadow-light dark:border-[#FFF] hover:dark:bg-[#FFF] dark:hover:shadow-dark-shadow">
-              <a href="https://www.instagram.com/_.carlosvfb._">
+              <a href="https://www.instagram.com/_.carlosvfb._" target="_blank">
                 <FaInstagram className="text-4xl p-2 hover:text-white text-[#000000] hover:dark:text-black dark:text-[#FFF]" />
               </a>
             </li>
             <li className="border-2 border-[#000000] rounded-full hover:bg-[#000000] hover:shadow-shadow-light dark:border-[#FFF] hover:dark:bg-[#FFF] dark:hover:shadow-dark-shadow">
-              <a href="https://www.linkedin.com/in/carlos-v%C3%ADtor-faria-barboza?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BTAXLngDWRc%2B0dl5fPB0aAA%3D%3D">
+              <a href="https://www.linkedin.com/in/carlos-v%C3%ADtor-faria-barboza?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BTAXLngDWRc%2B0dl5fPB0aAA%3D%3D" target="_blank">
                 <FaLinkedin className="text-4xl p-2 hover:text-white text-[#000000] hover:dark:text-black dark:text-[#FFF]" />
               </a>
             </li>
             <li className="border-2 border-[#000000] rounded-full hover:bg-[#000000] hover:shadow-shadow-light dark:border-[#FFF] hover:dark:bg-[#FFF] dark:hover:shadow-dark-shadow">
-              <a href="https://wa.me/5561999607934">
+              <a href="https://wa.me/5561999607934" target="_blank">
                 <FaWhatsapp className="text-4xl p-2 hover:text-white text-[#000000] hover:dark:text-black dark:text-[#FFF]" />
               </a>
             </li>
