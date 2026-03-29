@@ -2,40 +2,62 @@
 
 import Image from "next/image";
 import {
-  Card,
-  CardDescription,
   CardTitle,
 } from "@/components/ui/card"
 import { motion } from "framer-motion";
 
 
-interface Skills {
+interface Skill {
   title: string;
   image: string;
-  description: string;
+  items: string[];
 }
 
 interface SkillsProps {
-  skills: Skills[];
+  skills: Skill[];
 }
 
 export function Skills({ skills }: SkillsProps ) {
     return (
       <section className="py-20">
-        <motion.div className="text-center mb-12" initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <h2 className="text-3xl font-bold">Minhas Habilidades</h2>
-          <p className="text-gray-600 dark:text-gray-300">
-            Descubra as principais habilidades que desenvolvi ao longo da minha trajetória.
-          </p>
-        </motion.div>
-        <div className="flex flex-wrap justify-center gap-8 px-6" >
-          {skills.map((skill, index) => (
-              <motion.div key={index} className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-md hover:scale-105 flex flex-col items-center gap-4 max-w-xs w-full" initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>   
-                <CardTitle className="text-2xl font-bold">{skill.title}</CardTitle>
-                <Image src={skill.image} alt={skill.title} width={100} height={100}/>
-                <CardDescription className="text-base font-semibold text-gray-700 dark:text-gray-300 break-words text-justify">{skill.description}</CardDescription>
+        <div className="container px-6">
+          <motion.div className="text-center mb-12" initial={{ opacity: 0, y: -50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+            <h2 className="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+              Minhas Habilidades
+            </h2>
+            <p className="text-muted-foreground">Conhecimentos principais, apresentados de forma objetiva.</p>
+          </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
+            {skills.map((skill, index) => (
+              <motion.div
+                key={index}
+                className="group rounded-2xl shadow-lg hover:shadow-xl transition-transform hover:-translate-y-1"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="rounded-2xl bg-surface-2/60 backdrop-blur-sm ring-1 ring-outline-variant/40 p-6 flex flex-col items-center gap-4 transition hover:ring-outline-variant/70">
+                  <CardTitle className="text-xl font-bold text-foreground">{skill.title}</CardTitle>
+                  <Image src={skill.image} alt={skill.title} width={80} height={80} className="drop-shadow-md" />
+                  <div className={`w-full ${skill.items.length > 4 ? "grid grid-cols-2 gap-x-8" : ""}`}>
+                    <ul className="w-full list-disc list-outside pl-5 text-sm font-semibold leading-6 text-foreground/90 marker:text-primary space-y-1">
+                      {skill.items.slice(0, 4).map((item, itemIndex) => (
+                        <li key={itemIndex}>{item}</li>
+                      ))}
+                    </ul>
+                    {skill.items.length > 4 && (
+                      <ul className="w-full list-disc list-outside pl-5 text-sm font-semibold leading-6 text-foreground/90 marker:text-primary space-y-1">
+                        {skill.items.slice(4).map((item, itemIndex) => (
+                          <li key={`more-${itemIndex}`}>{item}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </div>
               </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
     );

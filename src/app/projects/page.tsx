@@ -3,6 +3,22 @@ import { Layout } from "@/components/layout";
 
 const projects = [
     {
+      title: 'Site para Bandas',
+      description: 'Plataforma integrada que conecta bandas e público através de uma experiência de contratação simplificada. Desenvolvida com Next.js e Tailwind CSS no front-end, Node.js com PostgreSQL no back-end—toda a stack em TypeScript. Arquitetura modular com três interfaces especializadas: painel do Cliente (gestão de pedidos e interação), painel da Banda (agendamento de shows, repertório e fluxo de recebimentos) e Dashboard Administrativo (supervisão da plataforma). Atuei como desenvolvedor full-stack, liderando o back-end e contribuindo na implementação majoritária do front-end em equipe.',
+      previewImage: '/siteparabandas.png',
+      previewGif: '/siteparabandas.gif',
+      codeLink: '#',
+      demoLink: 'https://siteparabandas.com/',
+    },
+    {
+      title: 'Perfilize',
+      description: 'Perfilize é uma plataforma de ativação viral que transforma campanhas institucionais em experiências compartilháveis nas redes sociais. Usuários finais acessam campanhas, aplicam molduras personalizadas em fotos de perfil e stories, amplificando organicamente o alcance da causa. Desenvolvida com React e TypeScript no front-end (UI responsiva e otimizada para conversão), e Node.js no back-end com integração nativa de Mercado Pago. O modelo de monetização segue arquitetura SaaS com planos escalonados que desbloqueiam recursos e garantem acesso granular por nível de permissão. A plataforma oferece dois painéis especializados: Console Administrativo (gerência de campanhas, usuários, planos e analytics) e Painel Institucional (criação e orquestração de campanhas, editor de molduras com preview em tempo real).',
+      previewImage: '/perfilize.png',
+      previewGif: '/perfilize.gif',
+      codeLink: '#',
+      demoLink: 'https://perfilize.com.br/',
+    },
+    {
       title: 'Resgate +',
       description: 'Resgate+ é um projeto open-source desenvolvido com Next.js e estilizado com Tailwind CSS. Ele foi criado para facilitar a arrecadação de alimentos, roupas e outros itens essenciais para auxiliar pessoas afetadas no Rio Grande do Sul. A plataforma conecta doadores a campanhas e iniciativas de apoio, promovendo solidariedade e engajamento social.',
       previewImage: '/resgatemais.png',

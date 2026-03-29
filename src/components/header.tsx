@@ -7,16 +7,16 @@ import { DrawerDemo } from "./drawer-menu";
 
 export function Header() {
     return (
-      <header className="bg-transparent border-b-[1px] border-black  text-black dark:text-white dark:border-white py-4 px-0">
-        <div className="container flex justify-between items-center">
-          <Link href="#" className="flex flex-col">
-            <h1 className="text-2xl font-bold">Carlos Vítor</h1>
-            <p className="text-sm font-semibold">Portifólio profissional</p>
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-outline-variant/40 bg-surface/70 backdrop-blur-xl">
+        <div className="container flex h-20 items-center justify-between">
+          <Link href="/" className="flex flex-col leading-tight">
+            <h1 className="text-xl font-extrabold tracking-tight text-foreground">Carlos Vítor</h1>
+            <p className="text-xs font-semibold text-muted-foreground">Portfólio profissional</p>
           </Link>
           <div className="hidden md:block">
             <Navbar />
           </div>
-          <div >
+          <div className="flex items-center gap-2">
             <ModeToggle />
             <DrawerDemo />
           </div>
