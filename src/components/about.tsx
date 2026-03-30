@@ -89,7 +89,7 @@ export function About() {
 
           <div className="flex items-center gap-3 mt-4">
             <Link
-              href="https://docs.google.com/document/d/1QHNNyBLFNnG39P8cFgwXYKPAxyUXvwOw/export?format=pdf"
+              href="https://docs.google.com/document/d/1_hRO99xD1uiZYt6Zmpf2yj1Fepnvso1zjtgyw-tNtPg/export?format=pdf"
               download
               onClick={handleDownload}
               className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[0_18px_45px_-28px_rgba(0,82,255,0.65)] transition hover:brightness-110 active:scale-[0.99]"
